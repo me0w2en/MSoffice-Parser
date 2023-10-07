@@ -80,9 +80,9 @@ class OfficeData:
 def main():
     parser = argparse.ArgumentParser(description="Microsoft docx file metadata extractor.")
 
-    parser.add_argument("-m", "--media", dest="media", action="store_true", default=False,
-                        help="Uncompress the stored media in the specified directory. " +
-                            "As default, xtractor will create a directory with the name of the file.")
+    parser.add_argument("-m", "--media", dest="media", action="store_false",
+                    help="Do not uncompress the stored media in the specified directory.")
+
 
     parser.add_argument("-d", "--directory", dest="directory", action="store", default=".",
                         help="Name of the  directory where to output the media.")
